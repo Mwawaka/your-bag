@@ -13,6 +13,9 @@ module.exports = {
         redDark: "hsl(360, 67%, 44%)",
         redLight: "hsl(360, 71%, 66%)",
       },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+      },
     },
   },
   plugins: [],

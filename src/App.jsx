@@ -1,13 +1,12 @@
 import React from "react";
+import Navbar from "./components/Navbar";
 
 
 function App() {
   return (
-    <div className="App">
-      <main>
-      <h1>Redux Toolkit</h1>
-      </main>
-    </div>
+    <main className="text-greyOne">
+      <Navbar/>
+    </main>
   );
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import CartItem from './CartItem';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../reducers/cartSlice';
+import { openModal } from '../reducers/modalSlice';
 
 const CartContainer = () => {
     const { cartItems, amount, total } = useSelector((store) => store.cart);
     const dispatch = useDispatch();
-    const handleClick = () => {
-        dispatch(clearCart());
+    const handleModal = () => {
+        dispatch(openModal());
     }
     if (amount< 1) {
         return (
@@ -40,7 +40,7 @@ const CartContainer = () => {
                     <h3>$ {total.toFixed(2)}</h3>
                 </div>
                 <div className='max-w-xs mx-auto text-center mt-12'>
-                    <button className=' bg-transparent py-[0.5rem] px-[1.8rem] text-redDark border-2 border-redDark rounded-lg font-bold tracking-widest mb-12 hover:bg-redLight hover:border-redLight hover:outline hover:outline-2' onClick={handleClick}>CLEAR CART</button>
+                    <button className=' bg-transparent py-[0.5rem] px-[1.8rem] text-redDark border-2 border-redDark rounded-lg font-bold tracking-widest mb-12 hover:bg-redLight hover:border-redLight hover:outline hover:outline-2' onClick={handleModal}>CLEAR CART</button>
                 </div>
 
 

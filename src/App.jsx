@@ -9,13 +9,14 @@ import Modal from './components/Modal';
 function App() {
   const dispatch = useDispatch();
   const { cartItems } = useSelector(store => store.cart)
+  const { isOpen } = useSelector(store => store.modal)
   useEffect(() => {
     dispatch(calculateTotals());
   }, [cartItems, dispatch]);
   //each time their is change in cartItems the dispatch is run 
   return (
     <main className="text-greyOne">
-      <Modal/>
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
     </main>

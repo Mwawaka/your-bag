@@ -11,7 +11,7 @@ function App() {
   const { cartItems } = useSelector(store => store.cart)
   useEffect(() => {
     dispatch(calculateTotals());
-  }, [cartItems, dispatch])
+  }, [cartItems, dispatch]);
   return (
     <main className="text-greyOne">
       <Navbar />

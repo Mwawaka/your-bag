@@ -37,7 +37,7 @@ const CartContainer = () => {
                 <hr />
                 <div className='flex justify-between font-semibold text-2xl mt-4'>
                     <h3>Total</h3>
-                    <h3>$ {total}</h3>
+                    <h3>$ {total.toFixed(2)}</h3>
                 </div>
                 <div className='max-w-xs mx-auto text-center mt-12'>
                     <button className=' bg-transparent py-[0.5rem] px-[1.8rem] text-redDark border-2 border-redDark rounded-lg font-bold tracking-widest mb-12 hover:bg-redLight hover:border-redLight hover:outline hover:outline-2' onClick={handleClick}>CLEAR CART</button>

@@ -12,6 +12,7 @@ function App() {
   useEffect(() => {
     dispatch(calculateTotals());
   }, [cartItems, dispatch]);
+  //each time their is change in cartItems the dispatch is run 
   return (
     <main className="text-greyOne">
       <Navbar />

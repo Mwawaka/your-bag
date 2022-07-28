@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronDown, ChevronUp } from "../icons";
-import { removeItem,increase } from "../reducers/cartSlice";
+import { removeItem,increase,decrease } from "../reducers/cartSlice";
 import { useDispatch } from "react-redux";
 const CartItem = ({ id, title, price, quantity, img }) => {
     const dispatch = useDispatch();
@@ -8,7 +8,10 @@ const CartItem = ({ id, title, price, quantity, img }) => {
         dispatch(removeItem(id));
     }
     const handleIncrease = () => {
-        dispatch(increase(id));
+        dispatch(increase({id}));
+    }
+    const handleDecrease = () => {
+        dispatch(decrease({id}));
      }
     return (
         <article className='grid grid-cols-3 gap-x-6  items-center my-10'>
@@ -21,7 +24,7 @@ const CartItem = ({ id, title, price, quantity, img }) => {
             <div className='flex flex-col items-center'>
                 <button className="text-primary" onClick={handleIncrease}> <ChevronUp /></button>
                 {quantity}
-                <button className="text-primary"><ChevronDown /></button>
+                <button className="text-primary" onClick={handleDecrease}><ChevronDown /></button>
             </div>
 
 

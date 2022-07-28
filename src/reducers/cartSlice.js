@@ -15,13 +15,13 @@ const url = "https://course-api.com/react-useReducer-cart-project";
 
 export const getCartItems = createAsyncThunk(
   "cart/getCartItems",
-  async (name, thunkApi) => {
+  async (name, thunkAPI) => {
     try {
       const { data } = await axios.get(url);
 
       return data;
     } catch (error) {
-      return thunkApi.rejectWithValue("something went wrong");
+      return thunkAPI.rejectWithValue("something went wrong");
     }
   }
 );

@@ -2,7 +2,7 @@ import React from "react";
 import { ChevronDown, ChevronUp } from "../icons";
 import { removeItem,increase,decrease } from "../reducers/cartSlice";
 import { useDispatch } from "react-redux";
-const CartItem = ({ id, title, price, quantity, img }) => {
+const CartItem = ({ id, title, price, amount, img }) => {
     const dispatch = useDispatch();
     const handleRemove = () => {
         dispatch(removeItem(id));
@@ -23,7 +23,7 @@ const CartItem = ({ id, title, price, quantity, img }) => {
             </div>
             <div className='flex flex-col items-center'>
                 <button className="text-primary" onClick={handleIncrease}> <ChevronUp /></button>
-                {quantity}
+                {amount}
                 <button className="text-primary" onClick={handleDecrease}><ChevronDown /></button>
             </div>
 

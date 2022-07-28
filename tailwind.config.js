@@ -12,6 +12,7 @@ module.exports = {
         greyTen: "#f1f5f8",
         redDark: "hsl(360, 67%, 44%)",
         redLight: "hsl(360, 71%, 66%)",
+        modalColor: "rgba(0,0,0,0.7)",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
